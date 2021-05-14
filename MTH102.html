@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTH 102</title>
+    <style>
+        .TriArea {
+            width:400px;
+            height: 350px;
+            border: 10px solid rgb(8, 8, 8);
+            border-radius: 20px;
+            background-color: rgb(185, 34, 14);
+            padding: 10px;
+            margin: auto;
+            box-shadow:6px 5px 20px rgb(8, 8, 8) ;
+        }
+        body{
+            background-color: rgb(165, 69, 69);
+        }
+        h1{
+            color: rgb(255, 0, 0);
+            font-size: 36px;
+        }
+        h2{
+            color: rgb(244, 244, 247);
+        }
+        
+        hr{
+            box-shadow:4px 3px 4px #f8f8f8 ;
+        }
+        input{
+            background-color: rgb(240, 238, 138);
+            border-radius:10px;
+            height: 25px;
+            color: rgb(212, 86, 128);
+            font-size: 15px;
+            padding-left: 15px;
+            
+        }
+        p{
+            color: rgb(170, 95, 185);
+            font-size: 30px;
+            text-shadow:2px 2px 4px rgb(175, 91, 161);
+        }
+    </style>
+</head>
+<body>
+    <div class="TriArea">
+        <center><h1>Triangle Area</h1></center>
+        <hr size="2px" noshade="" , color="black">
+        <h2>Base:</h2>
+        <input type="text" name="" id="base" value="10">
+        <h2>Height:</h2>
+        <input type="text" name="" id="height" value="10">
+        <p id="result"></p>
+        <script>
+            let b = document.getElementById("base");
+            let h = document.getElementById("height");
+            let area = document.getElementById("result");
+            b.addEventListener("input", triArea);
+            h.addEventListener("input", triArea);
+            function triArea(){
+                let base = parseFloat(b.value);
+                let height = parseFloat(h.value);
+                area.innerHTML = `The triangle area is ${(0.5 * base * height).toFixed(2)}.`
+            }
+        </script>
+    </div>
+</body>
+</html>
