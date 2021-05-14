@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chinorod</title>
+    <script>
+        function SPEEDRATE() {
+            let D = parseFloat(document.getElementById("D").value);
+            let n = parseFloat(document.getElementById("n").value);
+            let Vc = (3.14159265 * D * n) / 1000;
+            document.getElementById("SPEEDRATE").value = Vc.toFixed(3);
+        }
+    </script>
+    <script>
+        function FEEDRATE() {
+            let fz = parseFloat(document.getElementById("FEED PER TOOTH").value);
+            let Zn = parseFloat(document.getElementById("NUMBER OF TEETH").value);
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let Vf = (fz * Zn *n1);
+            document.getElementById("FEED RATE").value = Vf.toFixed(3);
+        }
+    </script>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .Calculator{
+            width: 350px;
+            height: 390px;
+            border: 5px solid black;
+            border-radius: 10px;
+            background-color: #ff7171;
+            padding: 15px;
+            margin: 20px;
+            font-family:sans-serif;
+        }
+        .Calculator h1{
+            text-align: center;
+        }
+        .Calculator input{
+            background-color: rgb(255, 255, 255);
+            border-radius:10px;
+            height: 20px;
+        }
+        .Calculator button{
+            background-color: rgb(0, 216, 115);
+            border-radius: 20px;
+            padding: 13px;
+        }
+        h1{
+            font-size: 20px;
+            text-align: center;
+        }
+        h2{
+            font-size: 50px;
+            text-align: center;
+            color: #1c1427;
+            font-family:sans-serif;
+            background-color: #9fd8df;
+        }
+        h3 {
+            text-align: center;
+            color: #1b2021;
+            background-color: #9fd8df;
+        }
+        body{
+            background-color: #f5c0c0;
+        }
+        .img{
+            border-radius: 10px;
+            border: 5px solid black;
+        }
+        input{
+            margin: 10px;
+        }
+    </style>    
+</head>
+<body>
+    <div>
+        <h2 >SPEEDRATE AND FEEDRATE</h2>
+      </div>  
+  <div class="container">
+    <!-- SPEED RATE -->
+    <div class="Calculator">
+        <h1>SPEED RATE</h1>
+        <label for="" style="margin-left: 20px;">Spindle speed (n)</label>
+        <br>
+        <input type="text" name="" id="n" size=""> (rev/min)
+        <br>
+        <label for="" style="margin-left: 20px;">Diameter (Dm)</label>
+        <br>
+        <input type="text" name="" id="D" size=""> (mm)
+        <br>
+        <hr style="border: 2px solid black;">
+        <label for="" style="margin-left: 20px;">SPEED RATE (Vc)</label>
+        <br>
+        <input type="text" name="" id="SPEEDRATE" size=""> (m/min)
+        <br>
+        <button onclick="SPEEDRATE()">Enter</button>
+    </div>
+    <!-- FEED RATE -->
+    <div class="Calculator">
+        <h1>FEED RATE</h1>
+        <label for="" style="margin-left: 20px;">Feed per teeth (fz)</label>
+        <br>
+        <input type="text" name="" id="FEED PER TOOTH" size=""> (mm/tooth)
+        <br>
+        <label for="" style="margin-left: 20px;">Number of teeth (Zn)</label>
+        <br>
+        <input type="text" name="" id="NUMBER OF TEETH" size="">
+        <br>
+        <label for="" style="margin-left: 20px;">Spindle speed (n)</label>
+        <br>
+        <input type="text" name="" id="n1" size=""> (rev/min)
+        <br>
+        <hr style="border: 2px solid black;">
+        <label for="" style="margin-left: 20px;">FEED RATE (Vf)</label>
+        <br>
+        <input type="text" name="" id="FEED RATE" size=""> (mm/min)
+        <br>
+        <button class="botton2" onclick="FEEDRATE()">Enter</button>
+    </div>
+  </div>
+  <div class="container">
+    <img class="img" src="https://www.meetyoucarbide.com/wp-content/uploads/2021/01/%E5%9B%BE%E7%89%871-1.png" alt="">
+  </div>
+  <div >
+    <h3 >ชิโณรส ทรัพย์สิงห์ทอง 63070504830 </h3>
+    </div>
+</body>
+</html>
